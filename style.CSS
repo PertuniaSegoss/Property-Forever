@@ -1,0 +1,65 @@
+h1 {
+  text-align: start;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background: #cf7979;
+}
+h2 {
+  text-align: center;
+}
+body {
+  background-color: white;
+}
+p {
+  font-size: 20px;
+  text-align: start;
+}
+.message {
+  margin-left: 10px;
+}
+.care {
+  color: black;
+}
+.gold {
+  transition: all 150ms ease-in-out;
+}
+.gold:hover {
+  filter: contrast(80%);
+  transform: scale(1.9);
+}
+
+ul {
+  padding: 20px;
+}
+button {
+  border-radius: 20px;
+  margin: ;
+  display: block;
+  background-color: #fff;
+  border: 1px solid #885df1;
+  color: #885df1;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 200ms ease;
+  text-align: start;
+}
+button:hover {
+  color: #fff;
+  background: #885df1;
+  cursor: pointer;
+}
+div {
+  text-align: start;
+}
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.center {
+  width: 50%;
+}
+.Them {
+  margin-left: auto;
+}
