@@ -86,7 +86,6 @@ function prevSlide(index) {
   showSlide(index, -1);
 }
 
-// Dark mode toggle with localStorage
 const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
 
