@@ -12,7 +12,7 @@ body {
 }
 
 .navbar {
-  background-color: #cf7979;
+  background-color: rgb(130, 199, 245);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,7 +52,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  background: #cf7979;
+  background: green;
   color: white;
   padding: 20px;
   margin-bottom: 0;
@@ -128,13 +128,13 @@ textarea {
 }
 
 button {
-  display: inline-block;
-  border-radius: 20px;
+  display:inline block;
+  border-radius: 10px;
   background-color: #fff;
   border: 1px solid #885df1;
   color: #885df1;
-  font-size: 16px;
-  padding: 10px 20px;
+  font-size: 5px;
+  padding: 20px 20px;
   transition: all 200ms ease-in-out;
   text-align: center;
 }
