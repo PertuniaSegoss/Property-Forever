@@ -163,6 +163,7 @@ function prevSlide(index) {
   showSlide(index, -1);
 }
 
+
 const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
 
@@ -177,4 +178,34 @@ themeToggle.addEventListener("click", () => {
   const isDark = body.classList.contains("dark");
   themeToggle.textContent = isDark ? "🌞" : "🌙";
   localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("cookie-popup");
+  const acceptBtn = document.getElementById("accept-cookie");
+  const declineBtn = document.getElementById("decline-cookie");
+
+  function getCookie(name) {
+    return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
+  }
+
+  function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days * 86400000).toUTCString();
+    document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+  }
+
+  if (!getCookie("cookieConsent")) {
+    popup.style.display = "flex";
+  }
+
+  acceptBtn.addEventListener("click", () => {
+    setCookie("cookieConsent", "accepted", 30);
+    popup.style.display = "none";
+  });
+
+  declineBtn.addEventListener("click", () => {
+    setCookie("cookieConsent", "declined", 30);
+    popup.style.display = "none";
+  });
 });
