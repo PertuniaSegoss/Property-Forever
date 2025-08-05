@@ -163,23 +163,21 @@ function prevSlide(index) {
   showSlide(index, -1);
 }
 
-
 const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
 
 const currentTheme = localStorage.getItem("theme");
 if (currentTheme === "dark") {
   body.classList.add("dark");
-  themeToggle.textContent = "🌞";
+  themeToggle.textContent = "Dark Mode";
 }
 
 themeToggle.addEventListener("click", () => {
   body.classList.toggle("dark");
   const isDark = body.classList.contains("dark");
-  themeToggle.textContent = isDark ? "🌞" : "🌙";
+  themeToggle.textContent = isDark ? "Dark" : "Light";
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const popup = document.getElementById("cookie-popup");
@@ -187,7 +185,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const declineBtn = document.getElementById("decline-cookie");
 
   function getCookie(name) {
-    return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
+    return document.cookie
+      .split("; ")
+      .find((row) => row.startsWith(name + "="))
+      ?.split("=")[1];
   }
 
   function setCookie(name, value, days) {
